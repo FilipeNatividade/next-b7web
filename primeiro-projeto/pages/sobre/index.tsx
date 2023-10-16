@@ -1,4 +1,7 @@
+import Link from "next/link"
 import React from "react"
+
+
 
 const Sobre = () => {
     return (
@@ -6,10 +9,13 @@ const Sobre = () => {
             <h1>Página sobre</h1>
 
             <ul>
-                <li><a href="/sobre/bonieky">Bonieky</a></li>
-                <li><a href="/sobre/joao">João</a></li>
+                <li><Link href="/sobre/bonieky">Bonieky</Link></li>
+                <li><Link href="/sobre/joao">João</Link></li>
             </ul>
+
+            <Link href="/sobre/todo">To dos</Link>
         </div>
     )
 }
+
 export default Sobre
