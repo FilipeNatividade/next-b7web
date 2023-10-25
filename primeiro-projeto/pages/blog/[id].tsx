@@ -1,5 +1,7 @@
+import { Layout } from '@/components/Layout'
 import { Post } from '@/types/post'
 import { GetStaticProps } from 'next'
+import Head from 'next/head'
 import { ParsedUrlQuery } from 'querystring'
 import React from 'react'
 
@@ -13,11 +15,32 @@ type Props = {
 
 const BlogItem = ({ post }: Props) => {
     return (
+        <Layout>
         <div>
+        <Head>
+        <title>next muito louco</title>
+        <meta name="title" content={post.title} />
+        <meta name="description" content={post.body} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://localhost:3000//blog/${post.id}`} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.body} />
+        <meta property="og:image" content="https://localhost:3000/vercel.svg" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={`https://localhost:3000//blog/${post.id}`} />
+        <meta property="twitter:title" content={post.title} />
+        <meta property="twitter:description" content={post.body} />
+        <meta property="twitter:image" content="https://localhost:3000/vercel.svg" />
+
+      </Head>
+            
             <h1>Blog</h1>
             <h2>{post.title}</h2>
             <p>{post.body}</p>
         </div>
+        </Layout>
     )
 }
 

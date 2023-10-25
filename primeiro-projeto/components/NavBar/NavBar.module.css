@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 30px;
+}
+
+.linkItem {
+  padding: 0;
+}
+
+.linkItem a {
+  color: #000;
+}
+
+.linkItem a:hover {
+  text-decoration: none;
+}
+
+.linkActive a{
+    font-weight: 900;
+    color: #000;
+}
